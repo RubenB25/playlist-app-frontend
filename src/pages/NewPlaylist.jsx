@@ -3,7 +3,6 @@ import styles from "../styles/AuthForm.module.css";
 import { API_URL } from "../utils/consts";
 import { AuthContext } from "../providers/AuthProvider";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
 
 const NewPlaylist = () => {
   const titleId = useId();
@@ -33,8 +32,7 @@ const NewPlaylist = () => {
   };
 
   return (
-    <div>
-      <Navbar />
+    <div className={styles.container}>
       <h2>Create a new Playlist</h2>
       <form onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.inputGroup}>

@@ -19,9 +19,6 @@ const Playlist = ({ playlists, getPlaylist }) => {
 
   return (
     <div style={{ minWidth: "420px" }}>
-      <Link to="/playlist/new" className="btn btn-success">
-        Create
-      </Link>
       <input
         type="search"
         className="form-control"
@@ -45,6 +42,9 @@ const Playlist = ({ playlists, getPlaylist }) => {
           );
         })}
       </>
+      <Link to="/playlist/new" className="btn btn-success">
+        Nueva publicación
+      </Link>
     </div>
   );
 };

@@ -51,10 +51,12 @@ function LoginForm() {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className={styles.container}>
       <form onSubmit={handleSubmit} ref={ref} className={styles.form}>
+        <h2>Iniciar sesión</h2>
+
         <div className={styles.inputGroup}>
+          
           <label htmlFor={emailRef}>Email:</label>
           <input
             type="email"

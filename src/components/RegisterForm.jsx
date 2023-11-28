@@ -43,9 +43,13 @@ function RegisterForm() {
   };
 
   return (
-    <div>
-      <h2>Register</h2>
+    <div className={styles.container}>
+      
       <form onSubmit={handleSubmit} ref={ref} className={styles.form}>
+      <h2>Bienvenido a TravelPost</h2>
+      <p>
+        Registrese para poder compartir sus experiencias de viaje con el mundo
+      </p>
         <div className={styles.inputGroup}>
           <input type="url" placeholder="www.my-avatar.com" name="avatar" />
         </div>
@@ -58,7 +62,7 @@ function RegisterForm() {
         <div className={styles.inputGroup}>
           <input type="password" placeholder="*******" name="password" />
         </div>
-        <button>Register</button>
+        <button>Registrarse</button>
       </form>
     </div>
   );

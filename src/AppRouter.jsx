@@ -7,12 +7,16 @@ import PlaylistPage from "./pages/PlaylistPage";
 import PrivateRoutes from "./components/PrivateRoutes";
 import NewPlaylist from "./pages/NewPlaylist";
 import MusicPage from "./pages/MusicsPage";
+import Navbar from "../src/components/Navbar";
 
 function AppRouter() {
   return (
+    <div>
+      <Navbar />
     <Routes>
       {/* Rutas Protegidas */}
       <Route element={<PrivateRoutes />}>
+  
         <Route path="/" element={<HomePage />} />
         <Route path="/playlist" element={<PlaylistPage />} />
         <Route path="/playlist/new" element={<NewPlaylist />} />
@@ -25,6 +29,7 @@ function AppRouter() {
 
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
+    </div>
   );
 }
 export default AppRouter;
